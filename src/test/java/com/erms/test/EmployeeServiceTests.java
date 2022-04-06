@@ -57,7 +57,7 @@ public class EmployeeServiceTests {
 	@Test
 	public void shouldEmployeeNameSameForReturnObject() throws Exception {
 		Employee created = employeeService.save(employee);
-		Assert.assertEquals(created.getName(), employee.getName());
+		Assert.assertEquals(employee.getName(),created.getName());
 	}
 
 	@Test(expected = InvalidDataAccessApiUsageException.class)

@@ -41,19 +41,19 @@ public class EmployeeItemProcessorTests {
 	@Test
 	public void shouldNotReturnAgeCategorySeniorEmployee() throws Exception {
 		Employee emp = employeeFileProcessor.process(ERMConstants.mockEmployee3);
-		Assert.assertNotEquals(emp.getAgeCategory(), ERMConstants.AGE_CATEOGRY);
+		Assert.assertNotEquals(ERMConstants.AGE_CATEOGRY,emp.getAgeCategory());
 	}
 
 	@Test
 	public void shouldReturnPerformanceLevelHighPerformer() throws Exception {
 		Employee emp = employeeFileProcessor.process(ERMConstants.mockEmployee3);
-		Assert.assertEquals(emp.getPerformanceLevel(), ERMConstants.PERFORMANCE_LEVEL);
+		Assert.assertEquals(ERMConstants.PERFORMANCE_LEVEL,emp.getPerformanceLevel());
 	}
 
 	@Test
 	public void shouldNotReturnPerformanceLevelHighPerformer() throws Exception {
 		Employee emp = employeeFileProcessor.process(ERMConstants.mockEmployee2);
-		Assert.assertNotEquals(emp.getPerformanceLevel(), ERMConstants.PERFORMANCE_LEVEL);
+		Assert.assertNotEquals(ERMConstants.PERFORMANCE_LEVEL,emp.getPerformanceLevel());
 	}
 
 	@Test(expected = java.text.ParseException.class)

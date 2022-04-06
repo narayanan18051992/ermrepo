@@ -30,9 +30,6 @@ public class ERMUtilTests {
 	@Mock
 	Properties prop;
 
-	@Mock
-	InputStream input;
-
 	@Before
 	public void setUp() throws Exception {
 		ERMUtil.getInstance();

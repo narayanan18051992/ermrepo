@@ -51,7 +51,7 @@ public class ErmApplicationTests {
 	@Test
 	public void shouldJobLauncherRunMethodNotExecuted() throws Exception {
 		JobParameters params = new JobParametersBuilder()
-				.addString(ERMConstants.JobID, String.valueOf(System.currentTimeMillis())).toJobParameters();
+				.addString(ERMConstants.JOB_ID, String.valueOf(System.currentTimeMillis())).toJobParameters();
 		verify(jobLauncher, times(0)).run(job, params);
 	}
 

@@ -49,29 +49,29 @@ public class EmployeeEntityTests {
 
 	@Test
 	public void shouldNameEqualsInEntity() {
-		String expected = ERMConstants.MOCK_NAME;
-		employee.setName(expected);
-		Assert.assertEquals(employee.getName(), expected);
+		String actualName = ERMConstants.MOCK_NAME;
+		employee.setName(actualName);
+		Assert.assertEquals(actualName,employee.getName());
 	}
 
 	@Test
 	public void shouldIdEqualsInEntity() {
-		int expected = ERMConstants.MOCK_ID;
-		employee.setId(expected);
-		Assert.assertEquals(employee.getId(), expected);
+		int actualId = ERMConstants.MOCK_ID;
+		employee.setId(actualId);
+		Assert.assertEquals(actualId,employee.getId());
 	}
 
 	@Test
 	public void shouldDobEqualsInEntity() {
-		String expected = ERMConstants.MOCK_DOB;
-		employee.setDob(expected);
-		Assert.assertEquals(employee.getDob(), expected);
+		String actualDob = ERMConstants.MOCK_DOB;
+		employee.setDob(actualDob);
+		Assert.assertEquals(actualDob,employee.getDob());
 	}
 
 	@Test
 	public void shouldRatingEqualsInEntity() {
 		employee.setRating(ERMConstants.MOCK_RATING);
-		Assert.assertEquals(employee.getRating(), ERMConstants.MOCK_RATING);
+		Assert.assertEquals(ERMConstants.MOCK_RATING,employee.getRating());
 	}
 
 	@Test

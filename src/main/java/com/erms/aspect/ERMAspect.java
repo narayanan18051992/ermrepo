@@ -8,16 +8,14 @@ import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;
-import com.erms.ErmApplication;
 
 @Aspect
 @Component
 public class ERMAspect {
 
-	private static final Logger logger = LoggerFactory.getLogger(ErmApplication.class);
+	private static final Logger logger = LoggerFactory.getLogger(ERMAspect.class);
 
-	@AfterThrowing(value = "execution(* com.erms..*.*(..))", throwing = "ex") // method will be called after exception
-																				// is thrown
+	@AfterThrowing(value = "execution(* com.erms..*.*(..))", throwing = "ex") // method will be called after exception thrown
 	public void logEmployeeItemWriterError(JoinPoint joinPoint, Exception ex) {
 		logger.error("Throwing exception in method:" + joinPoint.getSignature());
 		logger.error("Exception is:" + ex.getMessage());

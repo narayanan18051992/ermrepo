@@ -9,7 +9,7 @@ public class ERMConstants {
 	public static final String EMP_PERFORMANCE_LEVEL="emp.performance.level";
 	public static final String EMP_DOB="emp.dob";
 	public static final String SCHEDULER_CRON="scheduler.cron";
-	public static final String JobID="JobID";
+	public static final String JOB_ID="JobID";
 	public static final String PROPERTIES_FILE_PATH="properties.file.path";
 	public static final String PROPERTIES_FILE_NAME="ermconfig.properties";
 	public static final String INPUT_FILE_PATH="input.file.path";

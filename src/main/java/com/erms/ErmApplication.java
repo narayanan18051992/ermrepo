@@ -17,17 +17,19 @@ public class ErmApplication {
 
 	@Autowired
 	JobLauncher jobLauncher;
+	
 	@Autowired
 	Job job;
+	
 	private JobParameters params;
 
 	public static void main(String[] args) {
 		SpringApplication.run(ErmApplication.class, args);
 	}
 
-	@Scheduled(cron = "0 */1 * * * ?")   // scheduler will be started every 1 min 
+	@Scheduled(cron = "${scheduler.cron}")  
 	public void perform() throws Exception {
-		params = new JobParametersBuilder().addString(ERMConstants.JobID, String.valueOf(System.currentTimeMillis()))
+		params = new JobParametersBuilder().addString(ERMConstants.JOB_ID, String.valueOf(System.currentTimeMillis()))
 				.toJobParameters();
 		jobLauncher.run(job, params);
 	}
