@@ -22,7 +22,7 @@ public class ERMUtil {
 		}catch(FileNotFoundException e) {
 			throw e;
 		}finally {
-			input.close();
+			//input.close();
 		}
 		return ermUtil;
 	}
